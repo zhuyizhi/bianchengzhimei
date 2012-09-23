@@ -29,7 +29,7 @@ public class MergeSort {
 		}
 	}
 	public static void main(String[] args)throws Exception{
-		int[] arr = Producer.getIntArray(250000000);
+		int[] arr = Producer.getIntArray(25000000);
 //		Producer.printIntArr(arr);
 		long t1 = System.currentTimeMillis();
 		mergeSort(arr, arr.length - 1, 0);

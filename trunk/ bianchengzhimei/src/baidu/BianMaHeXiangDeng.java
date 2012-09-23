@@ -26,10 +26,6 @@ import java.util.Random;
 		* 
 			* low 超过最大值，即数据全为0；
 			* high超过最大值，即数据从最高位到low都是9，即999...999000...0000
-
-
-
-
  * 
  * @author ucai
  *
