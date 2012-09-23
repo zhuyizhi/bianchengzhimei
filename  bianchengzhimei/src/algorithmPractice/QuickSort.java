@@ -72,11 +72,14 @@ public class QuickSort {
 	
 	
 	public static void main(String[] args){
-		Producer p = new Producer();
-		int len = 20;
-		int[] arr = p.getIntArray(len);
-		Producer.printIntArr(arr);
+		int len = 25000000;
+		int[] arr = Producer.getIntArray(len);
+//		Producer.printIntArr(arr);
+		long t1 = System.currentTimeMillis();
 		quick_sort(arr, 0, len - 1);
-		Producer.printIntArr(arr);
+		long t2 = System.currentTimeMillis();
+		System.out.println(t2 - t1);
+//		quick_sort(arr, 0, len - 1);
+//		Producer.printIntArr(arr);
 	}
 }
