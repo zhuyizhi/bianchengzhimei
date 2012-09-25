@@ -16,7 +16,6 @@ public class ByteOperation {
 		}
 		
 		byte res = 0;
-//		for(byte bt : arr)
 		for(int bt : arr)
 			res |= bt;
 		
@@ -28,6 +27,14 @@ public class ByteOperation {
 	public static void test(byte b){
 		for(int i = 7; i >= 0; i--){
 			System.out.print((b & masks[i]) >>> i); 
+		}
+	}
+	
+	public static void testChuangXinAnd(int num){
+		int count = 0;
+		while(true){
+			
+			
 		}
 	}
 	

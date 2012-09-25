@@ -14,12 +14,7 @@ public class CircularLinkedListTest {
 			first = first.next;
 		
 		while(first != null){
-//			int count = k;
 			int count = 0;
-//			if(first.next == null || first.equals(first.next)){
-//				System.out.println(first);
-//				break;
-//			}
 			while(++count < m)
 				first = first.next;
 			if(first.next == null || first.equals(first.next)){
@@ -29,7 +24,6 @@ public class CircularLinkedListTest {
 			CircularList<Integer> toDelete = first.next;
 			first.next = toDelete.next;
 			System.out.print(toDelete +"-->");
-//			first = first.next;
 		}
 	}
 	
