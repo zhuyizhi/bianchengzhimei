@@ -50,19 +50,16 @@ public class EightQueens {
 	这个算法写的简洁的原因是：搜索树的组织方法非常简单。使用一个一维数组，数组下标代表当前层次，数组内容代表该层的搜索结点。这样无论是每层上
 	的搜索、树的层次的改变、状态的恢复都非常简单。
 	*/
-	public static int eightQueens(){
-//		int[][] chessBoard=new int[8][8];
-		int[] chess=new int[8];
-		for(int i=0;i<8;i++)
-			chess[i]=-1;
-		int line=0;
-		while(line>=0){
-			while(chess[line]<7){
-//				chess[line]=column;
+	public static int eightQueens() {
+		int[] chess = new int[8];
+		for (int i = 0; i < 8; i++)
+			chess[i] = -1;
+		int line = 0;
+		while (line >= 0) {
+			while (chess[line] < 7) {
 				chess[line]++;
-				int stat=getStatus(chess,line+1);
-//				System.out.println("stat="+stat);
-				switch(stat){
+				int stat = getStatus(chess, line + 1);
+				switch (stat) {
 				case 1:
 					System.out.println("得到一个可行解");
 					showBoard(chess);
@@ -73,7 +70,7 @@ public class EightQueens {
 				default:
 				}
 			}
-			chess[line]=0;
+			chess[line] = 0;
 			line--;
 		}
 		return 0;
