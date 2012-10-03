@@ -62,6 +62,24 @@ public class TreeOperate {
 		}
 	}
 	
+	public static void middleOrder_Stack(BinaryTree b){
+		Stack<BinaryTree> stack = new Stack<BinaryTree>();
+		stack.add(b);
+		while(!stack.isEmpty()){
+			BinaryTree top = stack.peek();
+			if(top == null){
+				stack.pop();
+				if(!stack.isEmpty()){
+					BinaryTree visit = stack.pop();
+					System.out.println(visit.node);
+					stack.push(visit.rightChild);
+				}
+			}else{
+				stack.push(top.leftChild);
+			}
+		}
+	}
+	
 	/**
 	 * 前序与中序的唯一不同就是输出语句的位置不同，前序的栈中存放的都是输出过的节点，而中序的栈里都是尚未输出的节点。
 	 * @param b
@@ -99,7 +117,8 @@ public class TreeOperate {
 //		to.preorder(to.bt);
 //		middleorder(to.bt);
 //		middleorder_no_recursion(to.bt);
-		preorder_no_recursion(to.bt);
+		middleOrder_Stack(to.bt);
+//		preorder_no_recursion(to.bt);
 	}
 	
 }
