@@ -1,5 +1,7 @@
 package basics;
 
+import java.util.Arrays;
+
 public class EightQueens {
 	
 	public static int getStatus(int[] chess,int step){//返回-1表示棋盘状态不满足条件，0表示部分解，1表示一个可行解。
@@ -75,6 +77,7 @@ public class EightQueens {
 		}
 		return 0;
 	}
+	
 	
 	public static void main(String[]args){
 		eightQueens();

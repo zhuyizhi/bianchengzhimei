@@ -22,4 +22,10 @@ public class Producer {
 		}
 		System.out.println();
 	}
+	
+	public static void printCharArray(char[] arr){
+		for(char c : arr)
+			System.out.print(c);
+		System.out.println();
+	}
 }
