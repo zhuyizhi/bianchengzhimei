@@ -16,6 +16,16 @@ public class Producer {
 		return arr;
 	}
 	
+	public static char[] getCharArray(int length, char[] source){
+		Random r = new Random();
+		char[] arr = new char[length];
+		for(int i = 0; i < length; i++){
+			int index = r.nextInt(source.length);
+			arr[i] = source[index];
+		}
+		return arr;
+	}
+	
 	public static void printIntArr(int[] arr){
 		for(int i : arr){
 			System.out.print(i + " ");
